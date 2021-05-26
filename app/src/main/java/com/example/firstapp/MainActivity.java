@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent mainIntent = new Intent(MainActivity.this, HomeActivity.class);
                 MainActivity.this.startActivity(mainIntent);
-
+                MainActivity.this.finish();
             }
         }, 3000);
 

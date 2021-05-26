@@ -2,10 +2,12 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,13 +21,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        final TextView inputNumber=findViewById(R.id.input_number);
+        final EditText inputNumber=findViewById(R.id.input_number);
         Button btnCompute=findViewById(R.id.compute_btn);
         final TextView textResult=findViewById(R.id.text_result);
         ListView list_view_result=findViewById(R.id.list_view_result);
         List<String> data=new ArrayList<>();
-        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,data);
+        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<>(this,R.layout.custom_textview,R.id.list_content,data);
         list_view_result.setAdapter(stringArrayAdapter);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange_500)));
 
         btnCompute.setOnClickListener(new View.OnClickListener() {
             @Override

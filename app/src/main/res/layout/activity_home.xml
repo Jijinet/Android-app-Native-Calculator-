@@ -9,7 +9,7 @@
     android:padding="40dp"
     tools:context=".HomeActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/input_number"
         android:layout_width="match_parent"
         android:layout_height="44dp"
@@ -23,13 +23,13 @@
         android:textSize="18sp"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/compute_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/orange_500"
+        android:background="@color/orange_700"
         android:text="@string/compute_btn"
         android:textSize="20sp" />
 
@@ -49,7 +49,7 @@
         android:id="@+id/list_view_result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FACCA4"
+        android:background="#FFFFFF"
         android:textColor="@color/black"
         android:visibility="visible"
         tools:visibility="visible" />
