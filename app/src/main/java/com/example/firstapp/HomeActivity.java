@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -25,10 +26,12 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCompute=findViewById(R.id.compute_btn);
         final TextView textResult=findViewById(R.id.text_result);
         ListView list_view_result=findViewById(R.id.list_view_result);
+        ListView lst = new ListView(this);
         List<String> data=new ArrayList<>();
-        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<>(this,R.layout.custom_textview,R.id.list_content,data);
+        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<>(this,R.layout.mytextview,data);
         list_view_result.setAdapter(stringArrayAdapter);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange_500)));
+
 
         btnCompute.setOnClickListener(new View.OnClickListener() {
             @Override

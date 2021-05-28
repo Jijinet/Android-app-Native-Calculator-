@@ -49,8 +49,9 @@
         android:id="@+id/list_view_result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:background="@drawable/text_view_style"
         android:textColor="@color/black"
         android:visibility="visible"
-        tools:visibility="visible" />
+        tools:visibility="visible"/>
+
 </LinearLayout>
